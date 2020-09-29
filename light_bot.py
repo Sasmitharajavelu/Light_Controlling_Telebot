@@ -7,7 +7,7 @@ import os
 ADAFRUIT_IO_USERNAME = os.getenv('ADAFRUIT_IO_USERNAME') #Get keys,username,token
 ADAFRUIT_IO_KEY = os.getenv('ADAFRUIT_IO_KEY')
 aio = Client('ADAFRUIT_IO_USERNAME','ADAFRUIT_IO_KEY')
-token_telegram = os.getenv('token_telegram')
+Telegram_token = os.getenv('Telegram_token')
 
 newfeed = Feed(name = 'hellolightbot') #create feed
 result = aio.create_feed(newfeed)
@@ -55,7 +55,7 @@ def commands(bot, update): #calling func with respect to commands
   else:
      invalid(bot,update)
     
-ur = Updater('token_telegram')
+ur = Updater('Telegram_token')
 dp = ur.dispatcher
 dp.add_handler(MessageHandler(Filters.text, commands))
 ur.start_polling()
