@@ -1,0 +1,2 @@
+Adafruit_IO
+python-telegram-bot
